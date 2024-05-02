@@ -1,3 +1,6 @@
+$base-font-sizes: 24, 18, 14;
+$base-font-weights: 500, 400, normal;
+
 #vue-3-bar-chart {
   --vbc-c-white: #ffffff;
   --vbc-c-white-soft: #f8f8f8;
@@ -57,12 +60,4 @@
     --vbc-color-heading: var(--vbc-c-text-dark-1);
     --vbc-color-text: var(--vbc-c-text-dark-2);
   }
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  font-weight: normal;
 }

@@ -6,6 +6,7 @@ export interface ChartData {
 }
 
 export interface ChartOptions {
+  title?: string
   dataLabel?: {
     formatter?: Formatter
     color?: string

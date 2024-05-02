@@ -6,6 +6,10 @@ import { ChartOperator } from '@/package/core/chartService';
 
 
 const props = defineProps({
+  chart: {
+    type: ChartOperator,
+    required: true
+  },
   series: {
     type: Object as () => ChartSeries,
     required: true
@@ -17,8 +21,7 @@ const props = defineProps({
 })
 
 const keyGen = (value: string) => value.replace(/[./\\]/g, '').replace(/ /g, '_')
-const chart = new ChartOperator(props.series, props.chartOptions)
-const widthList = chart.widthCalculator()
+const widthList = props.chart.widthCalculator()
 
 
 </script>
