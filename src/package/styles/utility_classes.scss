@@ -1,0 +1,13 @@
+// @use 'base' as *;
+
+@mixin text-styler($selectors...) {
+  @for $i from 1 through length($selectors) {
+    .text-#{nth($selectors, $i)} {
+      font-size: #{nth($base-font-sizes, $i)}px;
+      font-weight: #{nth($base-font-weights, $i)};
+    }
+  }
+}
+#vue-3-bar-chart {
+  @include text-styler(title, subtitle, caption);
+}

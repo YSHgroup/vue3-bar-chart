@@ -1,0 +1,63 @@
+$base-font-sizes: 24, 18, 14;
+$base-font-weights: 500, 400, normal;
+
+#vue-3-bar-chart {
+  --vbc-c-white: #ffffff;
+  --vbc-c-white-soft: #f8f8f8;
+  --vbc-c-white-mute: #f2f2f2;
+
+  --vbc-c-black: #181818;
+  --vbc-c-black-soft: #222222;
+  --vbc-c-black-mute: #282828;
+
+  --vbc-c-indigo: #2c3e50;
+
+  --vbc-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vbc-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vbc-c-divider-dark-1: rgba(99, 97, 97, 0.65);
+  --vbc-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vbc-c-text-light-1: var(--vbc-c-indigo);
+  --vbc-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vbc-c-text-dark-1: var(--vbc-c-white);
+  --vbc-c-text-dark-2: rgba(235, 235, 235, 0.64);
+}
+
+/* semantic color variables for this project */
+#vue-3-bar-chart {
+  --vbc-color-background: var(--vbc-c-white);
+  --vbc-color-background-soft: var(--vbc-c-white-soft);
+  --vbc-color-background-mute: var(--vbc-c-white-mute);
+
+  --vbc-color-border: var(--vbc-c-divider-light-2);
+  --vbc-color-border-hover: var(--vbc-c-divider-light-1);
+
+  --vbc-color-heading: var(--vbc-c-text-light-1);
+  --vbc-color-text: var(--vbc-c-text-light-1);
+
+  --section-gap: 160px;
+
+  box-sizing: border-box;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: normal;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  #vue-3-bar-chart {
+    --vbc-color-background: var(--vbc-c-black);
+    --vbc-color-background-soft: var(--vbc-c-black-soft);
+    --vbc-color-background-mute: var(--vbc-c-black-mute);
+
+    --vbc-color-border: var(--vbc-c-divider-dark-2);
+    --vbc-color-border-hover: var(--vbc-c-divider-dark-1);
+
+    --vbc-color-heading: var(--vbc-c-text-dark-1);
+    --vbc-color-text: var(--vbc-c-text-dark-2);
+  }
+}

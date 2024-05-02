@@ -1,0 +1,86 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vite-c-white: #ffffff;
+  --vite-c-white-soft: #f8f8f8;
+  --vite-c-white-mute: #f2f2f2;
+
+  --vite-c-black: #181818;
+  --vite-c-black-soft: #222222;
+  --vite-c-black-mute: #282828;
+
+  --vite-c-indigo: #2c3e50;
+
+  --vite-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vite-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vite-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vite-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vite-c-text-light-1: var(--vite-c-indigo);
+  --vite-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vite-c-text-dark-1: var(--vite-c-white);
+  --vite-c-text-dark-2: rgba(235, 235, 235, 0.64);
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--vite-c-white);
+  --color-background-soft: var(--vite-c-white-soft);
+  --color-background-mute: var(--vite-c-white-mute);
+
+  --color-border: var(--vite-c-divider-light-2);
+  --color-border-hover: var(--vite-c-divider-light-1);
+
+  --color-heading: var(--vite-c-text-light-1);
+  --color-text: var(--vite-c-text-light-1);
+
+  --section-gap: 160px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vite-c-black);
+    --color-background-soft: var(--vite-c-black-soft);
+    --color-background-mute: var(--vite-c-black-mute);
+
+    --color-border: var(--vite-c-divider-dark-2);
+    --color-border-hover: var(--vite-c-divider-dark-1);
+
+    --color-heading: var(--vite-c-text-dark-1);
+    --color-text: var(--vite-c-text-dark-2);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
