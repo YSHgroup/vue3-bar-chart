@@ -37,7 +37,7 @@ withDefaults(defineProps<Props>(), {
     </div>
 
     <div id="vbc-body" aria-roledescription="Vue3 Stacked Bar Chart Body">
-      <bar-chart-section :series />
+      <bar-chart-section :series :chartOptions />
     </div>
 
     <div id="vbc-footer" aria-roledescription="Vue3 Stacked Bar Chart Footer">

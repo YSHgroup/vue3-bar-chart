@@ -33,7 +33,7 @@ const chartOptions: ChartOptions = {
 
 <template>
   <div>
-    <stacked-bar-chart title="Credit Balance" :series width="900" height="300" border />
+    <stacked-bar-chart title="Credit Balance" width="900" height="300" border :series :chartOptions />
   </div>
 </template>
 

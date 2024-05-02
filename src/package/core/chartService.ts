@@ -1,4 +1,4 @@
-import type { ChartData, ChartOptions } from '../models/interfaces'
+import type { ChartOptions } from '../models/interfaces'
 import type { ChartSeries } from '../models/types'
 import { ChartBarCalculator } from './chartBarCalculator'
 
