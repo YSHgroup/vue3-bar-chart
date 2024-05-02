@@ -1,0 +1,16 @@
+#vue-3-bar-chart {
+  #vbc-header {
+    display: flex;
+  }
+  #vbc-body {
+    display: flex;
+    width: 100%;
+    height: 25%;
+    max-height: 300px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  #vbc-footer {
+  }
+}

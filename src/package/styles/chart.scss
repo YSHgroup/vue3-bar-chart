@@ -1,0 +1,36 @@
+$colors: #7cb1e5, #f5e99d, #82f184;
+
+@mixin color-bar($selector, $selectors...) {
+  @for $i from 0 to length($selectors) {
+    #{$selector}#{nth($selectors, $i + 1)} {
+      background-color: nth($list: $colors, $n: $i % 3 + 1);
+    }
+  }
+}
+
+@mixin multi-side-border($side) {
+  @if $side == left {
+    &:not(&:first-child) {
+      border-left: 1px solid var(--vbc-c-divider-dark-1);
+    }
+  } @else if $side == right {
+    &:not(&:last-child) {
+      border-right: 1px solid var(--vbc-c-divider-dark-1);
+    }
+  }
+}
+
+#vbc-body {
+  .bar-chart-section {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    border: 1px solid var(--vbc-c-divider-dark-1);
+
+    .chart-simple-bar {
+      color: var(--vbc-c-black-soft);
+      @include multi-side-border(right);
+    }
+    @include color-bar('.chart-simple-bar', '._1', '._2', '._3', '._4', '._5', '._6');
+  }
+}

@@ -5,7 +5,7 @@ import StackedBarChart from '@/package/components/StackedBarChart.vue'
 
 <template>
   <div>
-    <stacked-bar-chart width="700" height="500" border />
+    <stacked-bar-chart title="Credit Balance" width="700" height="300" border />
   </div>
 </template>
 

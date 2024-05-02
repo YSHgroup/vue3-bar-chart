@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import NavComponent from './components/NavComponent.vue'
 import DemoChart from './components/DemoChart.vue'
 </script>
 
 <template>
   <header>
-
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <NavComponent msg="Navigation" />
     </div>
   </header>
 

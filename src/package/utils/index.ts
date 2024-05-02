@@ -1,0 +1,1 @@
+export { styleSizeSuffixer } from './stringParsing'

@@ -16,3 +16,5 @@ export const styleSizeSuffixer = (value: string) => {
     return value + 'px'
   }
 }
+
+export const removeSpecialCharcters = (value: string) => value.replace(/[./\\?~]/g, '')
