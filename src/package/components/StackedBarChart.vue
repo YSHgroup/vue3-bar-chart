@@ -3,14 +3,17 @@ import '~/styles/index.scss'
 
 import BarChartSection from '~/components/chart_contents/BarChartSection.vue'
 import { styleSizeSuffixer } from '~/utils'
-import type { ChartData } from '../models/interfaces';
+import type { ChartSeries } from '../models/types';
+import type { ChartOptions } from '../models/interfaces';
 
 interface Props {
-  title: string,
-  width: string,
-  height: string,
-  border?: boolean,
-  style?: Object,
+  series: ChartSeries
+  title: string
+  width: string
+  height: string
+  chartOptions?: ChartOptions
+  border?: boolean
+  style?: Object
 }
 
 withDefaults(defineProps<Props>(), {
@@ -19,10 +22,7 @@ withDefaults(defineProps<Props>(), {
   border: false
 })
 
-const data: ChartData = {
-  axisValue: [50000, 30000, 20000],
-  chartText: ['Confirmed Fuel Uplift', 'Open Order Exposure', 'Available Credit']
-}
+
 </script>
 
 <template>
@@ -37,7 +37,7 @@ const data: ChartData = {
     </div>
 
     <div id="vbc-body" aria-roledescription="Vue3 Stacked Bar Chart Body">
-      <bar-chart-section :data />
+      <bar-chart-section :series />
     </div>
 
     <div id="vbc-footer" aria-roledescription="Vue3 Stacked Bar Chart Footer">

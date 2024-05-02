@@ -1,4 +1,19 @@
+import type { Formatter } from './types'
+
 export interface ChartData {
-  axisValue: number[]
-  chartText: string[]
+  name: string
+  data: number
+}
+
+export interface ChartOptions {
+  dataLabel?: {
+    formatter?: Formatter
+    color?: string
+  }
+  tonal?: {
+    enable?: Boolean
+    formatter?: Formatter
+    color?: string
+  }
+  color?: string[]
 }

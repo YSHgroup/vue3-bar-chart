@@ -18,3 +18,5 @@ export const styleSizeSuffixer = (value: string) => {
 }
 
 export const removeSpecialCharcters = (value: string) => value.replace(/[./\\?~]/g, '')
+
+export const thousandSeparatorFomatter = (value: number) => value.toLocaleString('en-US')

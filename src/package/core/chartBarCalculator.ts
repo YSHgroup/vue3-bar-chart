@@ -1,10 +1,15 @@
+import type { ChartData } from '../models/interfaces'
+import type { ChartSeries } from '../models/types'
+
 export class ChartBarCalculator {
   private chartText: string[] = []
   private axisValue: number[] = []
+  private chartSeries: ChartSeries = []
 
-  constructor(textList: string[], valueList: number[]) {
-    this.chartText = textList
-    this.axisValue = valueList
+  constructor(series: ChartSeries) {
+    this.chartText = series.map((item: ChartData) => item.name)
+    this.axisValue = series.map((item: ChartData) => item.data)
+    this.chartSeries = series
   }
 
   public widthCalculator() {

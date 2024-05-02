@@ -35,6 +35,14 @@
   --section-gap: 160px;
 
   box-sizing: border-box;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: normal;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

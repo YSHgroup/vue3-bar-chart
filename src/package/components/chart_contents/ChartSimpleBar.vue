@@ -17,9 +17,9 @@ const indexClass = ref(props.class)
 <template>
   <div :class="['chart-simple-bar', indexClass]" :style="{ backgroundColor: color, width }">
 
-    <span>
+    <p class="chart-datalabels">
       {{ text }}
-    </span>
+    </p>
   </div>
 </template>
 

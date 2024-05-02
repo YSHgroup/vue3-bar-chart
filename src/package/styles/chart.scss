@@ -29,6 +29,16 @@ $colors: #7cb1e5, #f5e99d, #82f184;
 
     .chart-simple-bar {
       color: var(--vbc-c-black-soft);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .chart-datalabels {
+        max-width: 90%;
+        text-align: center;
+        font-weight: 600;
+      }
+
       @include multi-side-border(right);
     }
     @include color-bar('.chart-simple-bar', '._1', '._2', '._3', '._4', '._5', '._6');
