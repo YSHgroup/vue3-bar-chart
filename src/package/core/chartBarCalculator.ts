@@ -1,10 +1,10 @@
-import type { ChartData } from '../models/interfaces'
+import type { ChartData, ChartOptions } from '../models/interfaces'
 import type { ChartSeries } from '../models/types'
 
 export class ChartBarCalculator {
-  private chartText: string[] = []
-  private axisValue: number[] = []
-  private chartSeries: ChartSeries = []
+  protected chartText: string[] = []
+  protected axisValue: number[] = []
+  protected chartSeries: ChartSeries = []
 
   constructor(series: ChartSeries) {
     this.chartText = series.map((item: ChartData) => item.name)
