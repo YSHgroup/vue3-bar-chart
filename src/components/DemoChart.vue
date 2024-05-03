@@ -22,12 +22,12 @@ const series: ChartSeries = [
 const chartOptions: ChartOptions = {
   title: 'Credit Balance',
   dataLabel: {
-    formatter: (name, data) => {
+    formatter: ({ name, data }) => {
       return `${name} - $${thousandSeparatorFomatter(data!)} USD`
     }
   },
   tonal: {
-    formatter: (name, data) => `$${thousandSeparatorFomatter(data!)}`
+    formatter: ({ data }) => `$${thousandSeparatorFomatter(data!)}`
   }
 }
 </script>

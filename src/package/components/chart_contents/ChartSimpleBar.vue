@@ -21,7 +21,7 @@ console.log('---->', props.chart)
   <div :class="['chart-simple-bar', indexClass]" :style="{ backgroundColor: color, width }">
 
     <p class="chart-datalabels">
-      {{ chart.outputDataLabel(text, data) }}
+      {{ chart.outputDataLabel({ name: text, data }) }}
     </p>
   </div>
 </template>

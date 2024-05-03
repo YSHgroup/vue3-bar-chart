@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import type { ChartSeries } from '@/package/models/types';
+import { computed } from 'vue';
 import ChartSimpleBar from './ChartSimpleBar.vue'
-import type { ChartOptions } from '@/package/models/interfaces';
 import { ChartOperator } from '@/package/core/chartService';
+
+import type { ChartSeries } from '@/package/models/types';
+import type { ChartOptions } from '@/package/models/interfaces';
 
 
 const props = defineProps({
@@ -22,7 +24,7 @@ const props = defineProps({
 
 const keyGen = (value: string) => value.replace(/[./\\]/g, '').replace(/ /g, '_')
 const widthList = props.chart.widthCalculator()
-
+const sumOfData = computed(() => props.series.reduce((sum, curr) => sum + curr.data, 0))
 
 </script>
 
@@ -30,6 +32,8 @@ const widthList = props.chart.widthCalculator()
   <div class="bar-chart-section">
     <chart-simple-bar v-for="(item, index) in series" :class="'_' + (index + 1)" :width="widthList[index]"
       :text="item.name" :data="item.data" :key="keyGen(item.name)" :chart />
+
+    <span class="vbc-tonal-label">{{ chart.outputTonalLabel({ sum: sumOfData }) }}</span>
   </div>
 </template>
 

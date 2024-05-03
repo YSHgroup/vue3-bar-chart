@@ -17,11 +17,19 @@ export class ChartOperator extends ChartBarCalculator {
     }
   }
 
-  public outputDataLabel(name: string, data: number) {
+  public outputDataLabel({ name, data }: { name?: string; data?: number }) {
     if (this.optionMode && this.chartOptions.dataLabel && this.chartOptions.dataLabel.formatter) {
-      return this.chartOptions.dataLabel.formatter(name, data)
+      return this.chartOptions.dataLabel.formatter({ name, data })
     } else {
       return data
+    }
+  }
+
+  public outputTonalLabel({ sum }: { sum?: number }) {
+    if (this.optionMode && this.chartOptions.tonal && this.chartOptions.tonal.formatter) {
+      return this.chartOptions.tonal.formatter({ data: sum })
+    } else {
+      return sum
     }
   }
 }
