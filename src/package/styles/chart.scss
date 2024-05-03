@@ -1,4 +1,4 @@
-$colors: #7cb1e5, #f5e99d, #82f184;
+$colors: #8abbec, #f3e8a3, #a4f7a5;
 
 @mixin color-bar($selector, $selectors...) {
   @for $i from 0 to length($selectors) {

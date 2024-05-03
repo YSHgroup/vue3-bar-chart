@@ -3,6 +3,7 @@ import StackedBarChart from '@/package/components/StackedBarChart.vue'
 import type { ChartOptions } from '@/package/models/interfaces';
 import type { ChartSeries } from '@/package/models/types';
 import { thousandSeparatorFomatter } from '@/package/utils/stringParsing';
+import backImage from '@/assets/lineBack.jpg'
 
 const series: ChartSeries = [
   {
@@ -28,8 +29,10 @@ const chartOptions: ChartOptions = {
   },
   tonal: {
     formatter: ({ data }) => `$${thousandSeparatorFomatter(data!)}`
-  }
+  },
+  background_image: [null, backImage, null]
 }
+
 </script>
 
 <template>

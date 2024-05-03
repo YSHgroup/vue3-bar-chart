@@ -1,4 +1,4 @@
-import type { Formatter } from './types'
+import type { BackImage, Formatter } from './types'
 
 export interface ChartData {
   name: string
@@ -17,4 +17,5 @@ export interface ChartOptions {
     color?: string
   }
   color?: string[]
+  background_image?: BackImage[]
 }

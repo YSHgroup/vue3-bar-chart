@@ -32,4 +32,21 @@ export class ChartOperator extends ChartBarCalculator {
       return sum
     }
   }
+
+  public backgroundSetter(index: number) {
+    if (
+      this.optionMode &&
+      this.chartOptions.background_image?.length &&
+      this.chartOptions.background_image[index]
+    ) {
+      return {
+        backgroundImage: `url(${this.chartOptions.background_image[index]}`,
+        backgroundSize: '12px 16px'
+      }
+    } else if (this.optionMode && this.chartOptions.color) {
+      return { backgroundColor: this.chartOptions.color[index] }
+    } else {
+      return {}
+    }
+  }
 }

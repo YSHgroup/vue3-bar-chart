@@ -31,7 +31,7 @@ const sumOfData = computed(() => props.series.reduce((sum, curr) => sum + curr.d
 <template>
   <div class="bar-chart-section">
     <chart-simple-bar v-for="(item, index) in series" :class="'_' + (index + 1)" :width="widthList[index]"
-      :text="item.name" :data="item.data" :key="keyGen(item.name)" :chart />
+      :text="item.name" :data="item.data" :key="keyGen(item.name)" :index :chart />
 
     <span class="vbc-tonal-label">{{ chart.outputTonalLabel({ sum: sumOfData }) }}</span>
   </div>

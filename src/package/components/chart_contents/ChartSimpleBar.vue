@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { ChartOperator } from '@/package/core/chartService';
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 
 interface Props {
   chart: ChartOperator
@@ -9,16 +9,18 @@ interface Props {
   text: string
   width: string
   data: number
+  index: number
 }
 
 const props = withDefaults(defineProps<Props>(), {
 })
 const indexClass = ref(props.class)
-console.log('---->', props.chart)
+const background = computed(() => props.chart.backgroundSetter(props.index))
+
 </script>
 
 <template>
-  <div :class="['chart-simple-bar', indexClass]" :style="{ backgroundColor: color, width }">
+  <div :class="['chart-simple-bar', indexClass]" :style="{ ...background, width }">
 
     <p class="chart-datalabels">
       {{ chart.outputDataLabel({ name: text, data }) }}
