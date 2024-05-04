@@ -3,15 +3,15 @@ import StackedBarChart from '@/package/components/StackedBarChart.vue'
 import type { ChartOptions } from '@/package/models/interfaces';
 import type { ChartSeries } from '@/package/models/types';
 import { thousandSeparatorFomatter } from '@/package/utils/stringParsing';
-import backImage from '@/assets/lineBack.jpg'
+import backImage from '@/assets/line_back.jpg'
 
 const series: ChartSeries = [
   {
-    name: 'Confirmed Fuel Uplift',
+    name: 'Amount paid',
     data: 50000
   },
   {
-    name: 'Open Order Exposure',
+    name: 'Open Order',
     data: 30000
   },
   {

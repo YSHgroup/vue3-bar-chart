@@ -41,7 +41,7 @@ export class ChartOperator extends ChartBarCalculator {
     ) {
       return {
         backgroundImage: `url(${this.chartOptions.background_image[index]}`,
-        backgroundSize: '12px 16px'
+        backgroundSize: '18px 20px'
       }
     } else if (this.optionMode && this.chartOptions.color) {
       return { backgroundColor: this.chartOptions.color[index] }

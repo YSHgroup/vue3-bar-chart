@@ -6,6 +6,7 @@ import { styleSizeSuffixer } from '~/utils'
 import type { ChartSeries } from '../models/types';
 import type { ChartOptions } from '../models/interfaces';
 import { ChartOperator } from '../core/chartService';
+import BarDescriptionPanel from './chart_contents/BarDescriptionPanel.vue';
 
 interface Props {
   series: ChartSeries
@@ -44,6 +45,8 @@ const chart = new ChartOperator(props.series, props.chartOptions)
     </div>
 
     <div id="vbc-footer" aria-roledescription="Vue3 Stacked Bar Chart Footer">
+      <bar-description-panel v-for='(item, i) in series' :key='i' :class='`_${i + 1}`' :index='i' :chart
+        :text='item.name' />
     </div>
   </div>
 </template>

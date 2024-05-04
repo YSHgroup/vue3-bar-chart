@@ -1,0 +1,23 @@
+#vbc-footer {
+  .vbc-description {
+    display: flex;
+    padding: 4px;
+    align-items: center;
+
+    .vbc-description-panel {
+      width: 16px;
+      height: 16px;
+      border: 1px solid var(--vbc-c-divider-dark-1);
+      margin-left: 4px;
+      margin-right: 4px;
+    }
+
+    .vbc-description-text {
+      width: fit-content;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    @include color-bar('.vbc-description-panel', '._1', '._2', '._3', '._4', '._5', '._6');
+  }
+}
