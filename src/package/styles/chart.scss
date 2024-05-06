@@ -28,25 +28,45 @@ $colors: #8abbec, #f3e8a3, #a4f7a5;
     display: flex;
     border: var(--vbc-border-width) solid var(--vbc-c-divider-dark-1);
 
-    .chart-simple-bar {
-      color: var(--vbc-c-black-soft);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-
-      .chart-datalabels {
-        max-width: 90%;
-        text-align: center;
-        font-weight: 600;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
+    .chart-simple-bar-box {
+      .chart-simple-bar {
+        height: 100%;
+        color: var(--vbc-c-black-soft);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         overflow: hidden;
-        text-overflow: ellipsis;
-      }
 
+        .chart-datalabels {
+          max-width: 90%;
+          text-align: center;
+          font-weight: 600;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
       @include multi-side-border(right);
+
+      .slide-enter-active {
+        animation: slide-chart 0.7s ease-in-out;
+      }
+      .slide-leave-active {
+        animation: slide-chart 0.5s reverse;
+      }
+      @keyframes slide-chart {
+        0% {
+          width: 0;
+        }
+        80% {
+          width: 110%;
+        }
+        100% {
+          width: 100%;
+        }
+      }
     }
 
     &::after {
