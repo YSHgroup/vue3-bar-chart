@@ -30,7 +30,7 @@ const series: ChartSeries = [
 ]
 
 const chartOptions: ChartOptions = {
-  title: 'Credit Balance',
+  title: 'Simple bar chart',
   dataLabel: {
     formatter: ({ name, data }) => {
       return `${name} - $${thousandSeparatorFomatter(data!)}`
@@ -46,7 +46,7 @@ const chartOptions: ChartOptions = {
 
 <template>
   <div>
-    <stacked-bar-chart title="Credit Balance" width="1200" style="padding: 1rem;" height="300" border :series
+    <stacked-bar-chart title="Simple bar chart" width="1200" style="padding: 1rem;" height="300" border :series
       :chartOptions>
       <template v-slot:header="{ title }">
         <h2 class="text-title">{{ title }}</h2>
