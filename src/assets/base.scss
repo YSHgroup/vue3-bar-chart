@@ -1,5 +1,15 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
+  $primary: #2d8ef5;
+  $secondary: #48f69f;
+  $surface: #ffffff;
+  $dark: #282828;
+  $light: #cfcfcf;
+
+  --primary-color: #{$primary};
+  --secondary-color: #{$secondary};
+  --surface-color: #{$surface};
+
   --vite-c-white: #ffffff;
   --vite-c-white-soft: #f8f8f8;
   --vite-c-white-mute: #f2f2f2;
@@ -34,6 +44,9 @@
   --color-text: var(--vite-c-text-light-1);
 
   --section-gap: 160px;
+
+  --nav-background-color: var(--primary-color);
+  --nav-text-color: var(--vite-c-white-soft);
 }
 
 @media (prefers-color-scheme: dark) {

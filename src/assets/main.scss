@@ -1,22 +1,56 @@
 @import './base.scss';
 
-#v-bar-chart {
+#app {
   margin: 0 auto;
-  padding: 2rem;
   font-weight: normal;
+  main {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  header {
+    .wrapper {
+      height: 100%;
+      width: 100%;
+    }
+
+    .layout-navigation {
+      text-align: center;
+      background-color: var(--nav-background-color);
+      color: var(--nav-text-color);
+      display: flex;
+      gap: 1rem;
+      padding: 5px 1rem;
+      align-items: baseline;
+      height: 100%;
+
+      .nav-items {
+        display: flex;
+        align-items: end;
+      }
+    }
+  }
+}
+
+%green {
+  color: hsla(160, 100%, 37%, 1);
 }
 
 a,
 .green {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
   padding: 3px;
+}
+
+.green {
+  @extend %green;
 }
 
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
+    text-decoration: underline;
   }
 }
 
@@ -24,11 +58,17 @@ a,
   body {
     display: flex;
     place-items: center;
-  }
+    #app {
+      display: grid;
+      width: 100%;
+      grid-template-columns: 260px 1fr;
+      .layout-navigation {
+        display: block;
 
-  #v-bar-chart {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+        .nav-items {
+          display: block;
+        }
+      }
+    }
   }
 }

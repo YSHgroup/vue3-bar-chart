@@ -4,7 +4,6 @@ import type { ChartOptions } from '@/package/models/interfaces';
 import type { ChartSeries } from '@/package/models/types';
 import { thousandSeparatorFomatter } from '@/package/utils/stringParsing';
 import backImage from '@/assets/line_back.jpg'
-import { ref, watch } from 'vue';
 
 const series: ChartSeries = [
   {

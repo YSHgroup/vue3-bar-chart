@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import NavComponent from './components/NavComponent.vue'
-import DemoChart from './components/DemoChart.vue'
 </script>
 
 <template>
@@ -11,7 +10,7 @@ import DemoChart from './components/DemoChart.vue'
   </header>
 
   <main>
-    <demo-chart />
+    <router-view />
   </main>
 </template>
 
