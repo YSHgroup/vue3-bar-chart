@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import ProfileForm from '@/components/form/ProfileForm.vue';
+
 </script>
 
 <template>
   <div>
-    <profile-form />
+    <input type="text">
   </div>
 </template>
 
