@@ -1,4 +1,13 @@
 .profile-form {
+  width: 75%;
+  margin: auto;
+  padding: 1.5rem;
   border: 1px solid grey;
-  width: 100%;
+  border-radius: 8px;
+  box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.369);
+  background-color: white;
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
 }
