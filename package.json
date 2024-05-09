@@ -15,7 +15,9 @@
   },
   "dependencies": {
     "floating-vue": "^5.2.2",
-    "vue": "^3.4.21"
+    "vee-validate": "^4.12.7",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.2"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",
