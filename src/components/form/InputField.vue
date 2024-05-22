@@ -57,5 +57,9 @@ const modelValue = defineModel('modelValue')
       box-shadow: 0 0 2px 2px dodgerblue;
     }
   }
+
+  pre {
+    color: red;
+  }
 }
 </style>
