@@ -10,7 +10,8 @@
 
   --primary-color: #{$primary};
   --secondary-color: #{$secondary};
-  --surface-color: #{$surface};
+  --surface-light: #{$surface};
+  --surface-dark: #{darken($surface, 80%)};
   --pirmary-back-color: #{$lighten-grey};
 
   --vite-c-white: #ffffff;
@@ -40,6 +41,8 @@
   --color-background-soft: var(--vite-c-white-soft);
   --color-background-mute: var(--vite-c-white-mute);
 
+  --color-surface: var(--surface-light);
+
   --color-border: var(--vite-c-divider-light-2);
   --color-border-hover: var(--vite-c-divider-light-1);
 
@@ -57,6 +60,8 @@
     --color-background: var(--vite-c-black);
     --color-background-soft: var(--vite-c-black-soft);
     --color-background-mute: var(--vite-c-black-mute);
+
+    --color-surface: var(--surface-dark);
 
     --color-border: var(--vite-c-divider-dark-2);
     --color-border-hover: var(--vite-c-divider-dark-1);
