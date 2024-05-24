@@ -7,6 +7,24 @@
   box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.369);
   background-color: var(--color-surface);
 
+  .input-fields {
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .btn-selects {
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
   @media screen and (max-width: 480px) {
     width: 100%;
   }

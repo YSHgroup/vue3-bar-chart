@@ -37,7 +37,7 @@ const modelValue = defineModel('modelValue')
 .form-input {
   display: block;
   padding: 5px;
-  width: 300px;
+  width: 350px;
   max-width: 100%;
 
   label {
