@@ -4,12 +4,18 @@ import { string } from 'yup'
 
 import InputField from './InputField.vue'
 import SwitchToggleButton from './SwitchToggleButton.vue';
+import { ref, watch } from 'vue';
 
 const { value: firstName, errorMessage: firstNameError } = useField('firstName', string().required().min(3).label('First Name'));
 const { value: lastName, errorMessage: lastNameError } = useField('lastName', string().label('Last Name'));
 const { value: email, errorMessage: emailError } = useField('email', string().email().required().label('E-mail'));
 const { value: phone, errorMessage: phoneError } = useField('phone', string().label('Phone Number'));
 
+const checkToggle = ref(false)
+
+watch(checkToggle, () => {
+  console.log('check toggle -->', checkToggle.value)
+})
 </script>
 
 <template>
@@ -47,7 +53,13 @@ const { value: phone, errorMessage: phoneError } = useField('phone', string().la
       />
     </div>
     <div class="btn-selects">
-      <SwitchToggleButton />
+      <SwitchToggleButton
+        checked-msg="Checked-On"
+        un-checked-msg="Turned-Off"
+        checked-bg="dodgerBlue"
+        un-checked-bg="dodgerBlue"
+        v-model="checkToggle"
+      />
     </div>
   </div>
 </template>
